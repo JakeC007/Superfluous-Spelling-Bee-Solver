@@ -69,8 +69,12 @@ def generate_words(input_letters, n = 0):
     return sorted_words
 
 if __name__ == "__main__":
-    input_letters = "tied"
+    input_letters = input("Please input chars: ")
     
+    if not input_letters.isalpha():
+        print("Error: Input contains non-alphabetic characters. Exiting.")
+        exit()
+
     print(f"\nGiven the following letters: {', '.join(list(input_letters))}")
     count_permutations(input_letters)
 
