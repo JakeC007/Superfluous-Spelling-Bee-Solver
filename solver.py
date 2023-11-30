@@ -7,6 +7,8 @@ from itertools import permutations
 import enchant
 import math
 
+##TODO: spelling bee requies every word to use the cen ter letter; modify this
+
 def count_permutations(input_letters):
     """
     Calculate and prints the number of permutations for words of length 1 to n.
@@ -29,6 +31,7 @@ def count_permutations(input_letters):
     for i, count in enumerate(permutations_count, start=1):
         print(f"Number of possible words of length {i}: {count}")
     
+    print("-"*10)
     return None
 
 def generate_words(input_letters, n = 0):
